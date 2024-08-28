@@ -35,6 +35,11 @@ namespace MoneyHeist.Api
                     options.SupportedCultures = supportedCultures;
                     options.SupportedUICultures = supportedCultures;
                 });
+                registry.Scan(scan =>
+                {
+                    scan.AssembliesFromApplicationBaseDirectory();
+                    scan.WithDefaultConventions(ServiceLifetime.Scoped);
+                });
             });
 
             var app = builder.Build();

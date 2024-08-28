@@ -1,4 +1,5 @@
 ﻿using Lamar;
+using Microsoft.AspNetCore.Hosting;
 
 namespace MoneyHeist.Api.Infrastructure
 {
@@ -11,6 +12,7 @@ namespace MoneyHeist.Api.Infrastructure
                 scan.TheCallingAssembly();
                 scan.WithDefaultConventions(ServiceLifetime.Scoped);
             });
+            serviceRegistry.AddAutoMapper(typeof(Program));
         }
     }
 }

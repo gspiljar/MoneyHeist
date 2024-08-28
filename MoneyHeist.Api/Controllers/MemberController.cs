@@ -21,7 +21,17 @@ namespace MoneyHeist.Api.Controllers
         public async Task<IActionResult> AddMember([FromBody] AddMemberHandler.Command command)
         {
             var result = await _mediator.Send(command);
-            return result.ToApiResponse();
+
+            return result.ToApiResponse(resultObject =>
+            {
+                return CreatedAtAction(nameof(GetMemberById), new { id = resultObject.MemberId}, null);
+            });
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetMemberById(string id)
+        {
+            return NotFound();
         }
     }
 }

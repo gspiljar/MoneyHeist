@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="ffb831d1-5d88-4391-9f12-c540056221db" ChangeDateTime="08/28/2024 18:10:48">
+    <Property Name="ElementName" Value="[dbo].[Members].[Sex]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Members]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SexId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4c6f0b05-9bd1-4b57-98ea-1ac270b75e67" ChangeDateTime="08/28/2024 18:15:48">
+    <Property Name="ElementName" Value="[dbo].[Members].[SexId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Members]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Sex" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="80e2d733-2ba6-4a2e-85a8-f6389d7081e5" ChangeDateTime="08/28/2024 18:24:38">
+    <Property Name="ElementName" Value="[dbo].[FK_Members_Skills_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[Members_Skills]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_Members_Skills_Members]" />
+  </Operation>
+</Operations>

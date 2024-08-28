@@ -58,9 +58,20 @@
     <Folder Include="Properties" />
     <Folder Include="dbo" />
     <Folder Include="Security" />
+    <Folder Include="dbo\User Defined Types" />
+    <Folder Include="dbo\Stored Procedures" />
+    <Folder Include="dbo\Tables" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Security\moneyheistuser.sql" />
     <Build Include="Security\WebUsers.sql" />
+    <Build Include="dbo\User Defined Types\SkillInsertType.sql" />
+    <Build Include="dbo\Tables\Members.sql" />
+    <Build Include="dbo\Tables\Skills.sql" />
+    <Build Include="dbo\Tables\Members_Skills.sql" />
+    <Build Include="dbo\Stored Procedures\spMemberInsert.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="MoneyHeist.Database.refactorlog" />
   </ItemGroup>
 </Project>
